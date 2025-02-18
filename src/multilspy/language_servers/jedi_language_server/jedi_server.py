@@ -55,6 +55,9 @@ class JediServer(LanguageServer):
         assert d["workspaceFolders"][0]["name"] == "$name"
         d["workspaceFolders"][0]["name"] = os.path.basename(repository_absolute_path)
 
+        if self.environment_path:
+            d["initializationOptions"]["workspace"]["environmentPath"] = self.environment_path
+
         return d
 
     @asynccontextmanager
