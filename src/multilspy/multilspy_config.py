@@ -30,6 +30,7 @@ class MultilspyConfig:
     """
     code_language: Language
     trace_lsp_communication: bool = False
+    environment_path: str
 
     @classmethod
     def from_dict(cls, env: dict):

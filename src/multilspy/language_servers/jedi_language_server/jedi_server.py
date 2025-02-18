@@ -25,6 +25,9 @@ class JediServer(LanguageServer):
         """
         Creates a JediServer instance. This class is not meant to be instantiated directly. Use LanguageServer.create() instead.
         """
+        if "environment_path" in config:
+            self.environment_path = config.environment_path
+
         super().__init__(
             config,
             logger,
