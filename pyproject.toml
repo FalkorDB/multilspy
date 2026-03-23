@@ -4,10 +4,11 @@ requires = ["flit_core>=3.4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "multilspy"
-version = "0.0.14"
+name = "falkordb-multilspy"
+version = "0.1.0"
 authors = [
   { name="Lakshya A Agrawal", email="lakshya.aagrawal@gmail.com" },
+  { name="FalkorDB", email="roi@falkordb.com" },
 ]
 description = "A language-agnostic LSP client in Python, with a library interface. Intended to be used to build applications around language servers. Currently multilspy supports language servers for Python, Rust, Java, Go, JavaScript, Ruby, C# and Dart. Originally appeared as part of Monitor-Guided Decoding (https://github.com/microsoft/monitors4codegen)"
 readme = "README.md"
@@ -35,11 +36,8 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/microsoft/multilspy"
-"Bug Tracker" = "https://github.com/microsoft/multilspy/issues"
+"Homepage" = "https://github.com/FalkorDB/multilspy"
+"Bug Tracker" = "https://github.com/FalkorDB/multilspy/issues"
 
-[tool.setuptools]
-include-package-data = true
-
-[tool.setuptools.packages.find]
-where = ["src"]
+[tool.flit.module]
+name = "multilspy"
